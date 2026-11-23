@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - NanCal</title>
+  <meta name="description" content="What data the NanCal app stores on your phone, what leaves it, who receives it, and how you can delete it.">
+  <link rel="canonical" href="https://nandorszabo.github.io/nancal/privacy.html">
+  <link rel="alternate" hreflang="hu" href="hu/privacy.html">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">NanCal</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="delete-data.html">Delete data</a></li>
+        <li><a href="medical.html">Not a medical device</a></li>
+        <li><a href="hu/privacy.html" lang="hu" hreflang="hu">Magyar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Privacy Policy</h1>
+<p class="meta">Last updated: 2026-11-23</p>
+
+<p class="lead">NanCal is a calorie and water tracker for Android and Wear OS. It has no user accounts. Your diary, profile and health data are stored on your phone and are not sent to us.</p>
+
+<div class="box">
+  <p><strong>In short</strong></p>
+  <ul>
+    <li>We do not know who you are: there is no sign-up, and we do not collect your name, e-mail address, phone number, location, contacts or advertising identifier.</li>
+    <li>The app contains no ads and no third-party analytics or advertising tools. We do not sell data.</li>
+    <li>Some features need the internet. This policy lists each of them, what they send and to whom.</li>
+  </ul>
+</div>
+
+<h2 id="controller">1. Who is responsible</h2>
+<address>
+  Nándor Szabó<br>
+  1067 Budapest, Teréz krt. 7.<br>
+  Private individual (magánszemély), no business registration or tax number<br>
+  E-mail: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a>
+</address>
+<p>In this policy "we" means the operator named above, who is the data controller under the EU General Data Protection Regulation (GDPR) for the processing described here.</p>
+
+<h2 id="on-device">2. Data stored on your phone</h2>
+<p>The app stores the following in its own private storage on your phone. We have no access to it.</p>
+<ul>
+  <li>Your profile: sex, date of birth, height, activity level and goal.</li>
+  <li>Your weight entries, logged meals, water intake, custom foods, recipes and settings.</li>
+  <li>Daily active calories, step counts and workouts read from Health Connect, if you allow it (see section 4).</li>
+  <li>API keys for AI providers that you enter yourself, encrypted with the Android Keystore.</li>
+  <li>A local log of AI requests (date, feature, token counts), so that you can see your usage.</li>
+</ul>
+<p>If you use the Wear OS app, the phone sends your daily summary (for example calories eaten, water, goals, favourite foods) to your own paired watch, and the watch sends your commands back. This uses the Wear OS Data Layer of Google Play services between your own devices.</p>
+
+<h2 id="leaves">3. Data that leaves your phone</h2>
+
+<h3 id="off">3.1 Food search and barcode lookup (Open Food Facts)</h3>
+<p>When you search online for a food or scan a barcode, the app sends the search term or barcode to <a href="https://openfoodfacts.org" rel="noopener">Open Food Facts</a>, an independent non-profit food database. The request carries the app name, the app version and our support e-mail address, and, like any internet request, your IP address is visible to their server. No profile or diary data is sent. Open Food Facts handles the request under its own privacy policy.</p>
+
+<h3 id="ai-own-key">3.2 AI estimates with your own API key</h3>
+<p>If you enter your own API key for Google Gemini or Anthropic Claude, AI features (meal photo, nutrition label, text description, recipe import) send the photo or text directly from your phone to the provider you selected, only when you tap the button. Before sending, the photo is downsized (longer side at most 1024 pixels) and re-encoded without metadata such as location (EXIF). We do not receive these requests. The provider processes them under its own terms and privacy policy, and may process them outside the European Economic Area (EEA), for example in the United States.</p>
+
+<h3 id="ai-built-in">3.3 Built-in AI (no key of your own)</h3>
+<p>If you use the built-in AI, the same photo or text is sent to the NanCal server (hosted on Google Cloud in the EU), which forwards it to Anthropic, PBC (Claude) in the United States, <strong>outside the EEA</strong>. Anthropic acts as our processor under its commercial terms: by default it does not use the content to train its models and may keep it for a limited time to detect abuse.</p>
+<ul>
+  <li>Our server does not store or log the photo, the text or the answer.</li>
+  <li>To enforce the daily allowance, the server keeps a counter for a random identifier of your installation. The identifier is created on your phone and the server only receives it in hashed form.</li>
+  <li>For each request the server log records the hashed installation identifier, the type of feature, the model, token counts, duration and result. Logs are kept for 30 days.</li>
+</ul>
+<p>Do not include other people or personal documents in the photos you send.</p>
+
+<h3 id="usage">3.4 Anonymous usage report</h3>
+<p>Unless you turn it off, the app sends an anonymous report at most once a day, about a completed day: how many times each feature was used, which optional settings are on, milestones reached (for example "first food logged"), the app version, the app language and the week of installation. The first-run screen tells you about this and lets you turn it off right there; later you can turn it off in Settings.</p>
+<ul>
+  <li>The report contains no installation, device or advertising identifier, no food names, nutrition values, weight, free text or other health data.</li>
+  <li>The server does not keep the individual report. It only increases summed counters, and it does not store or log your IP address.</li>
+  <li>When you turn reporting off, counters that were not yet sent are deleted from your phone.</li>
+</ul>
+
+<h3 id="install">3.5 Installation identifier and app integrity check</h3>
+<p>The first time you use a feature that needs our server (built-in AI, subscription, community foods), the app creates a random installation identifier. The server only ever receives its SHA-256 hash, and stores it with the app version, the day it was first seen and the day it was last seen. It is not linked to your name, Google account, device identifiers or IP address. The identifier is excluded from Android backups, so a restored or reinstalled app counts as a new installation.</p>
+<p>Requests to our server carry a Google Play Integrity token, which lets the server check that the request comes from the genuine app on a genuine device. The token is issued by Google Play services on your phone and verified by Google. Our server does not store the token; if a token is refused, only the reason is written to the server log.</p>
+
+<h3 id="subscription">3.6 Subscription (NanCal Pro)</h3>
+<p>Payments are handled entirely by Google Play. We never receive your name, e-mail address, payment card or billing address. When you buy or restore a subscription, the app sends the Google Play purchase token to our server, which checks it with Google. The server stores a hash of the token, the product and plan, the subscription state, the expiry time, whether it renews, and the hashed identifiers of up to three installations that use the subscription (with the day each was last seen). The raw token, the order number, your Google account, the price and your country are not stored.</p>
+
+<h3 id="community">3.7 Community barcode foods</h3>
+<p>If you save your own food with a barcode, the app uploads the product facts to the NanCal community database so that other users who scan the same barcode can find them: barcode, product name, brand, language of the name, unit, nutrition values per 100 g or 100 ml, serving size and package size. Photos, notes, serving names and anything from your diary are not uploaded. You can turn the upload off in Settings.</p>
+<ul>
+  <li>Next to each submission and each error report the server stores the hashed installation identifier and the day, only so that one installation counts once. A hash older than 180 days is removed by a daily cleanup, at the latest two days after that; the confirmation stays as an anonymous count.</li>
+  <li>When the app looks up a barcode in the community database, the server does not record which barcode you asked for, only the number of lookups, submissions and reports per installation for the current day. When you open a community food you already have, the app asks the server for its current data again, at most once a day per food.</li>
+  <li>Product facts themselves are not personal data and are kept without a time limit. They may later be published under an open licence (see the <a href="terms.html#community">Terms of Use</a>).</li>
+</ul>
+
+<h3 id="google-libs">3.8 Google components inside the app</h3>
+<p>Barcode scanning runs on your device; camera images are not uploaded for it. The app uses Google components (ML Kit barcode scanning, Google Play services, Play Integrity, and Google Play Billing for purchases). These components may send technical and diagnostic information to Google under <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. We do not receive that information.</p>
+
+<h2 id="health-connect">4. Health Connect</h2>
+<p>Health Connect is optional and every permission is requested separately. If you grant them, NanCal:</p>
+<ul>
+  <li><strong>reads</strong> active calories burned (to adjust your daily calorie budget), workouts and steps (to show them in your diary), water intake and weight recorded by other apps;</li>
+  <li><strong>writes</strong> the water you log, and, only if you turn these on, your weight and your meals (nutrition), so that other apps you authorise can use them.</li>
+</ul>
+<p>Data read from Health Connect is used only to provide these features inside the app. It stays on your phone, is never sent to our server or to AI providers, and is never used for advertising or sold. You can revoke the permissions at any time in Health Connect; the app keeps working without them.</p>
+
+<h2 id="backups">5. Backups and export</h2>
+<ul>
+  <li><strong>Manual and automatic backups, CSV export:</strong> files are written only to the place you choose (for example a folder on your phone or your cloud storage). Whoever provides that storage handles the file under their own terms.</li>
+  <li><strong>Android backup:</strong> if backup is turned on in your phone's settings, Android may include the app's database and settings (including your diary, weight and the daily activity totals read from Health Connect) in the backup of your Google account, and in a device-to-device transfer. This is done by Android and Google, not by us.</li>
+  <li><strong>Never included in any backup:</strong> your AI API keys, the installation identifier, the usage counters and pending voice requests from the watch.</li>
+</ul>
+
+<h2 id="purposes">6. Why we process data, and the legal basis</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col">Purpose</th><th scope="col">Data</th><th scope="col">Legal basis (GDPR)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Providing the built-in AI and enforcing its daily allowance</td><td>Photo or text you send, hashed installation identifier, counters</td><td>Performance of the contract with you (Art. 6(1)(b))</td></tr>
+    <tr><td>Checking and applying your subscription</td><td>Hashed purchase token, subscription state, hashed installation identifiers</td><td>Performance of the contract (Art. 6(1)(b))</td></tr>
+    <tr><td>Community food database, counting each installation once, daily limits</td><td>Product facts, hashed installation identifier, day</td><td>Our legitimate interest in a useful and reliable shared database (Art. 6(1)(f))</td></tr>
+    <tr><td>Protecting the service against abuse</td><td>Play Integrity result, hashed installation identifier, server logs</td><td>Our legitimate interest in security and cost control (Art. 6(1)(f))</td></tr>
+    <tr><td>Understanding which features are used</td><td>Anonymous summed counters</td><td>Our legitimate interest in improving the app (Art. 6(1)(f)); you can object by turning the report off</td></tr>
+  </tbody>
+</table>
+</div>
+<p>We do not use your data for automated decisions that have legal or similarly significant effects, and we do not build profiles of you.</p>
+
+<h2 id="recipients">7. Who receives data</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col">Recipient</th><th scope="col">Role</th><th scope="col">Location</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Google Cloud (Cloud Run, Firestore, logging)</td><td>Our processor: hosts the NanCal server and its database</td><td>EU (Belgium region)</td></tr>
+    <tr><td>Anthropic, PBC</td><td>Our processor: answers built-in AI requests</td><td>United States (outside the EEA)</td></tr>
+    <tr><td>Google Play (billing, Play Integrity)</td><td>Independent controller: payments, purchase checks, app integrity</td><td>EU and worldwide</td></tr>
+    <tr><td>Open Food Facts</td><td>Independent controller: food search and barcode lookup</td><td>France</td></tr>
+    <tr><td>Google (Gemini API) or Anthropic (Claude API), with your own key</td><td>Independent provider that you choose and have your own agreement with</td><td>May be outside the EEA</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Where personal data is transferred outside the EEA, the transfer relies on a safeguard permitted by the GDPR, such as an adequacy decision or the European Commission's standard contractual clauses. You can ask us for details at the address above.</p>
+
+<h2 id="retention">8. How long data is kept</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col">Data</th><th scope="col">Kept for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Data on your phone</td><td>Until you delete it, clear the app's storage or uninstall the app</td></tr>
+    <tr><td>Photo, text and answer of a built-in AI request</td><td>Not stored by our server</td></tr>
+    <tr><td>Installation record</td><td>400 days after the app last registered with the server, or earlier at your request</td></tr>
+    <tr><td>Daily AI counter, daily community counter</td><td>7 days after the day they count, or earlier at your request</td></tr>
+    <tr><td>Link between your installation and a subscription</td><td>Until you ask for deletion, or 400 days after the installation last checked its subscription</td></tr>
+    <tr><td>Subscription record (hashed purchase token, product, state, expiry)</td><td>While an installation uses it, then 90 days after its last change</td></tr>
+    <tr><td>Hashed installation identifier next to community foods</td><td>180 days after the confirmation or report, or earlier at your request</td></tr>
+    <tr><td>Server logs</td><td>30 days</td></tr>
+    <tr><td>Anonymous usage counters, community product facts</td><td>No time limit (not personal data)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Expired records are removed by a daily cleanup, so the actual deletion can happen up to two days after the periods above.</p>
+
+<h2 id="rights">9. Your rights</h2>
+<p>Under the GDPR you have the right to ask for access to your personal data, its correction or deletion, restriction of processing, data portability, and to object to processing based on legitimate interest. To use these rights, write to <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a>. We answer within one month.</p>
+<p>You can delete the server records of your installation yourself, immediately, in the app (Profile > About > Delete my data). Because we do not know who you are, by e-mail we can only find those records if you send us the installation reference shown in the app. The <a href="delete-data.html">data deletion page</a> explains both ways.</p>
+<p>You also have the right to complain to a data protection authority, in particular in the EU member state where you live. In Hungary this is the Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), <a href="https://www.naih.hu" rel="noopener">naih.hu</a>. You can also turn to a court.</p>
+
+<h2 id="age">10. Age</h2>
+<p>NanCal is intended for adults. You must be at least 18 years old to use it. We do not knowingly process data of children.</p>
+
+<h2 id="security">11. Security</h2>
+<ul>
+  <li>All network traffic uses HTTPS.</li>
+  <li>API keys are stored encrypted on the phone and never appear in logs or backups.</li>
+  <li>The server only accepts requests that pass the Google Play Integrity check, and its logs do not contain request contents, tokens or IP addresses.</li>
+</ul>
+
+<h2 id="changes">12. Changes to this policy</h2>
+<p>If we change how the app handles data, we will update this page and the date at its top. The current version is always available at https://nandorszabo.github.io/nancal/privacy.html.</p>
+
+<h2 id="contact">13. Contact</h2>
+<p>Questions about privacy: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a></p>
+<p>This policy is also available in <a href="hu/privacy.html" lang="hu" hreflang="hu">Hungarian</a>. If the two versions differ, the Hungarian version applies.</p>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>NanCal is operated by Nándor Szabó. Contact: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a></p>
+    <p>NanCal is not a medical device. This site uses no cookies, no trackers and no third-party scripts.</p>
+  </div>
+</footer>
+</body>
+</html>

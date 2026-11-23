@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adatvédelmi tájékoztató - NanCal</title>
+  <meta name="description" content="Milyen adatokat tárol a NanCal app a telefonodon, mi hagyja el a telefont, ki kapja meg, és hogyan törölheted.">
+  <link rel="canonical" href="https://nandorszabo.github.io/nancal/hu/privacy.html">
+  <link rel="alternate" hreflang="en" href="../privacy.html">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Ugrás a tartalomra</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../hu/index.html">NanCal</a>
+    <nav aria-label="Fő menü">
+      <ul>
+        <li><a href="../hu/privacy.html">Adatvédelem</a></li>
+        <li><a href="../hu/terms.html">Feltételek</a></li>
+        <li><a href="../hu/delete-data.html">Adattörlés</a></li>
+        <li><a href="../hu/medical.html">Nem orvosi eszköz</a></li>
+        <li><a href="../privacy.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Adatvédelmi tájékoztató</h1>
+<p class="meta">Utolsó frissítés: 2026-11-23</p>
+
+<p class="lead">A NanCal kalória- és vízkövető app Androidra és Wear OS-re. Nincs benne felhasználói fiók. A naplód, a profilod és az egészségadataid a telefonodon tárolódnak, hozzánk nem kerülnek el.</p>
+
+<div class="box">
+  <p><strong>Röviden</strong></p>
+  <ul>
+    <li>Nem tudjuk, ki vagy: nincs regisztráció, és nem gyűjtjük a nevedet, az e-mail címedet, a telefonszámodat, a tartózkodási helyedet, a névjegyeidet vagy a hirdetési azonosítódat.</li>
+    <li>Az appban nincs hirdetés, és nincs külső analitikai vagy hirdetési eszköz. Adatot nem adunk el.</li>
+    <li>Néhány funkcióhoz internet kell. Ez a tájékoztató mindegyiket felsorolja: mit küld és kinek.</li>
+  </ul>
+</div>
+
+<h2 id="controller">1. Ki felel az adatkezelésért?</h2>
+<address>
+  Nándor Szabó<br>
+  1067 Budapest, Teréz krt. 7.<br>
+  Private individual (magánszemély), no business registration or tax number<br>
+  E-mail: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a>
+</address>
+<p>Ebben a tájékoztatóban a "mi" a fent megnevezett üzemeltetőt jelenti, aki az itt leírt adatkezelések tekintetében az EU általános adatvédelmi rendelete (GDPR) szerinti adatkezelő.</p>
+
+<h2 id="on-device">2. A telefonodon tárolt adatok</h2>
+<p>Az app az alábbiakat a saját, privát tárhelyén tárolja a telefonodon. Ezekhez nem férünk hozzá.</p>
+<ul>
+  <li>A profilod: nem, születési dátum, magasság, aktivitási szint és cél.</li>
+  <li>A testsúly-bejegyzéseid, a naplózott étkezések, a vízfogyasztás, a saját ételeid, a receptjeid és a beállításaid.</li>
+  <li>A Health Connectből olvasott napi aktív kalória, lépésszám és edzések, ha ezt engedélyezed (lásd a 4. pontot).</li>
+  <li>Az AI szolgáltatókhoz általad megadott API kulcsok, az Android Keystore-ral titkosítva.</li>
+  <li>Az AI kérések helyi naplója (dátum, funkció, tokenszámok), hogy lásd a saját használatodat.</li>
+</ul>
+<p>Ha a Wear OS appot is használod, a telefon a napi összesítőt (például az elfogyasztott kalóriát, a vizet, a célokat, a kedvenc ételeket) a saját, párosított órádra küldi, az óra pedig a parancsaidat küldi vissza. Ez a Google Play-szolgáltatások Wear OS adatrétegén át, a saját eszközeid között történik.</p>
+
+<h2 id="leaves">3. Mi hagyja el a telefont?</h2>
+
+<h3 id="off">3.1 Ételkeresés és vonalkód (Open Food Facts)</h3>
+<p>Amikor online keresel egy ételt vagy vonalkódot olvasol be, az app a keresőszót vagy a vonalkódot elküldi az <a href="https://openfoodfacts.org" rel="noopener">Open Food Facts</a> független, nonprofit élelmiszer-adatbázisnak. A kérés tartalmazza az app nevét, verzióját és a support e-mail címünket, és mint minden internetes kérésnél, az IP-címedet a szerverük látja. Profil- vagy naplóadat nem megy el. Az Open Food Facts a kérést a saját adatvédelmi szabályai szerint kezeli.</p>
+
+<h3 id="ai-own-key">3.2 AI becslés saját API kulccsal</h3>
+<p>Ha megadod a saját Google Gemini vagy Anthropic Claude API kulcsodat, az AI funkciók (ételfotó, tápanyagtábla, szöveges leírás, recept-import) a fotót vagy a szöveget közvetlenül a telefonodról küldik a választott szolgáltatónak, és csak akkor, amikor megnyomod a gombot. Küldés előtt az app a fotót lekicsinyíti (a hosszabb oldal legfeljebb 1024 képpont), és metaadatok, például a helyadat (EXIF) nélkül kódolja újra. Ezeket a kéréseket mi nem kapjuk meg. A szolgáltató a saját feltételei és adatvédelmi szabályai szerint dolgozza fel őket, akár az Európai Gazdasági Térségen (EGT) kívül is, például az Egyesült Államokban.</p>
+
+<h3 id="ai-built-in">3.3 Beépített AI (saját kulcs nélkül)</h3>
+<p>Ha a beépített AI-t használod, ugyanez a fotó vagy szöveg a NanCal szerverére kerül (Google Cloud, EU), amely továbbítja az Anthropic, PBC (Claude) részére az Egyesült Államokba, vagyis <strong>az EGT-n kívülre</strong>. Az Anthropic a kereskedelmi feltételei szerint, adatfeldolgozónkként jár el: a tartalmat alapértelmezés szerint nem használja a modelljei tanítására, és a visszaélések felderítéséhez korlátozott ideig megőrizheti.</p>
+<ul>
+  <li>A szerverünk sem a fotót, sem a szöveget, sem a választ nem tárolja és nem naplózza.</li>
+  <li>A napi keret betartásához a szerver egy számlálót vezet a telepítésed véletlen azonosítójához. Az azonosító a telefonodon jön létre, a szerver csak a hash-ét kapja meg.</li>
+  <li>A szerver naplója kérésenként a telepítés-azonosító hash-ét, a funkció típusát, a modellt, a tokenszámokat, a futási időt és az eredményt rögzíti. A naplót 30 napig őrizzük meg.</li>
+</ul>
+<p>Az elküldött fotókon ne szerepeljen más személy vagy személyes irat.</p>
+
+<h3 id="usage">3.4 Névtelen használati jelentés</h3>
+<p>Ha nem kapcsolod ki, az app naponta legfeljebb egyszer névtelen jelentést küld egy lezárt napról: melyik funkciót hányszor használtad, mely választható beállítások vannak bekapcsolva, milyen mérföldköveket értél el (például "első naplózott étel"), az app verzióját, nyelvét és a telepítés hetét. Az első indítás képernyője erről tájékoztat, és ott helyben kikapcsolhatod; később a Beállításokban kapcsolható ki.</p>
+<ul>
+  <li>A jelentésben nincs telepítés-, eszköz- vagy hirdetési azonosító, nincs ételnév, tápérték, testsúly, szabad szöveg vagy más egészségadat.</li>
+  <li>A szerver magát a jelentést nem őrzi meg, csak összesített számlálókat növel, és az IP-címedet nem tárolja és nem naplózza.</li>
+  <li>Kikapcsoláskor a még el nem küldött számlálók törlődnek a telefonodról.</li>
+</ul>
+
+<h3 id="install">3.5 Telepítés-azonosító és az app eredetiségének ellenőrzése</h3>
+<p>Amikor először használsz olyan funkciót, amelyhez a szerverünk kell (beépített AI, előfizetés, közösségi ételek), az app létrehoz egy véletlen telepítés-azonosítót. A szerver mindig csak ennek az SHA-256 hash-ét kapja meg, és az app verziójával, az első és az utolsó jelentkezés napjával együtt tárolja. Nem kapcsolódik a nevedhez, a Google-fiókodhoz, eszközazonosítóhoz vagy IP-címhez. Az azonosító kimarad az Android biztonsági mentéséből, ezért a visszaállított vagy újratelepített app új telepítésnek számít.</p>
+<p>A szerverünknek küldött kérések Google Play Integrity tokent visznek, amellyel a szerver ellenőrizni tudja, hogy a kérés az eredeti apptól, valódi készülékről érkezik. A tokent a telefonodon a Google Play-szolgáltatások adják ki, és a Google ellenőrzi. A szerverünk a tokent nem tárolja; elutasított tokennél csak az ok kerül a szerver naplójába.</p>
+
+<h3 id="subscription">3.6 Előfizetés (NanCal Pro)</h3>
+<p>A fizetést teljes egészében a Google Play kezeli. A nevedet, az e-mail címedet, a bankkártyád adatait és a számlázási címedet soha nem kapjuk meg. Előfizetés vásárlásakor vagy visszaállításakor az app a Google Play vásárlási tokenjét elküldi a szerverünknek, amely azt a Google-nél ellenőrzi. A szerver a token hash-ét, a terméket és a csomagot, az előfizetés állapotát, a lejárat idejét, a megújulás tényét, valamint az előfizetést használó legfeljebb három telepítés azonosítójának hash-ét tárolja (az utolsó jelentkezés napjával). A nyers tokent, a rendelésszámot, a Google-fiókodat, az árat és az országodat nem tároljuk.</p>
+
+<h3 id="community">3.7 Közösségi vonalkódos ételek</h3>
+<p>Ha vonalkóddal mentesz saját ételt, az app a termék adatait feltölti a NanCal közösségi adatbázisába, hogy más felhasználók is megtalálják, ha ugyanazt a vonalkódot olvassák be: vonalkód, terméknév, márka, a név nyelve, egység, tápértékek 100 g-ra vagy 100 ml-re, adag- és kiszerelésméret. Fotó, megjegyzés, az adag neve és a naplód tartalma nem töltődik fel. A feltöltést a Beállításokban kikapcsolhatod.</p>
+<ul>
+  <li>A szerver minden beküldés és hibajelentés mellett a telepítés-azonosító hash-ét és a napot tárolja, kizárólag azért, hogy egy telepítés csak egyszer számítson. A 180 napnál régebbi hash-t napi takarítás törli, legkésőbb két nappal később; a megerősítés névtelen darabszámként megmarad.</li>
+  <li>Amikor az app a közösségi adatbázisban keres egy vonalkódot, a szerver nem rögzíti, melyik vonalkódot kérdezted le, csak a telepítés aznapi lekérdezéseinek, beküldéseinek és jelentéseinek számát. Ha megnyitsz egy korábban letöltött közösségi ételt, az app ételenként legfeljebb naponta egyszer újra lekéri a friss adatait.</li>
+  <li>A termékadatok önmagukban nem személyes adatok, ezeket időkorlát nélkül őrizzük meg. Később nyílt licenc alatt közzétehetők (lásd a <a href="terms.html#community">Felhasználási feltételeket</a>).</li>
+</ul>
+
+<h3 id="google-libs">3.8 Google-összetevők az appban</h3>
+<p>A vonalkód-olvasás a készülékeden fut; ehhez kamerakép nem kerül feltöltésre. Az app Google-összetevőket használ (ML Kit vonalkód-olvasás, Google Play-szolgáltatások, Play Integrity, vásárlásnál Google Play Billing). Ezek technikai és diagnosztikai információt küldhetnek a Google-nek a <a href="https://policies.google.com/privacy" rel="noopener">Google adatvédelmi irányelvei</a> szerint. Ezeket az információkat mi nem kapjuk meg.</p>
+
+<h2 id="health-connect">4. Health Connect</h2>
+<p>A Health Connect használata nem kötelező, és az app minden engedélyt külön kér. Ha megadod őket, a NanCal:</p>
+<ul>
+  <li><strong>olvassa</strong> az aktív (mozgással elégetett) kalóriát (a napi kalóriakeret módosításához), az edzéseket és a lépésszámot (hogy a naplóban megjelenjenek), valamint a más appok által rögzített vízfogyasztást és testsúlyt;</li>
+  <li><strong>írja</strong> az általad rögzített vizet, és csak akkor, ha ezt bekapcsolod, a testsúlyodat és az étkezéseidet (tápanyagbevitel), hogy az általad engedélyezett más appok is használhassák.</li>
+</ul>
+<p>A Health Connectből olvasott adatot kizárólag ezekhez a funkciókhoz, az appon belül használjuk. A telefonodon marad, soha nem kerül a szerverünkre vagy az AI szolgáltatókhoz, és soha nem használjuk hirdetéshez, és nem adjuk el. Az engedélyeket a Health Connectben bármikor visszavonhatod; az app nélkülük is működik.</p>
+
+<h2 id="backups">5. Mentés és export</h2>
+<ul>
+  <li><strong>Kézi és automatikus mentés, CSV export:</strong> a fájlok csak az általad választott helyre kerülnek (például a telefon egy mappájába vagy a felhőtárhelyedre). A fájlt a tárhely szolgáltatója a saját feltételei szerint kezeli.</li>
+  <li><strong>Android biztonsági mentés:</strong> ha a telefon beállításaiban a biztonsági mentés be van kapcsolva, az Android az app adatbázisát és beállításait (köztük a naplódat, a testsúlyodat és a Health Connectből olvasott napi aktivitási összesítőket) beteheti a Google-fiókod biztonsági mentésébe, illetve az eszközök közötti átvitelbe. Ezt az Android és a Google végzi, nem mi.</li>
+  <li><strong>Semmilyen mentésbe nem kerül bele:</strong> az AI API kulcsaid, a telepítés-azonosító, a használati számlálók és az óráról érkezett, függőben lévő hangos kérések.</li>
+</ul>
+
+<h2 id="purposes">6. Miért kezelünk adatot, és mi a jogalapja?</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col">Cél</th><th scope="col">Adat</th><th scope="col">Jogalap (GDPR)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A beépített AI nyújtása és a napi keret betartása</td><td>Az elküldött fotó vagy szöveg, a telepítés-azonosító hash-e, számlálók</td><td>A veled kötött szerződés teljesítése (6. cikk (1) b))</td></tr>
+    <tr><td>Az előfizetés ellenőrzése és érvényesítése</td><td>A vásárlási token hash-e, az előfizetés állapota, a telepítés-azonosítók hash-e</td><td>Szerződés teljesítése (6. cikk (1) b))</td></tr>
+    <tr><td>Közösségi ételadatbázis, egy telepítés egyszeri számítása, napi korlátok</td><td>Termékadatok, a telepítés-azonosító hash-e, nap</td><td>Jogos érdekünk a hasznos és megbízható közös adatbázis fenntartásához (6. cikk (1) f))</td></tr>
+    <tr><td>A szolgáltatás védelme a visszaélésekkel szemben</td><td>A Play Integrity eredménye, a telepítés-azonosító hash-e, szervernapló</td><td>Jogos érdekünk a biztonsághoz és a költségek kordában tartásához (6. cikk (1) f))</td></tr>
+    <tr><td>Annak megértése, mely funkciókat használják</td><td>Névtelen, összesített számlálók</td><td>Jogos érdekünk az app fejlesztéséhez (6. cikk (1) f)); a jelentés kikapcsolásával tiltakozhatsz ellene</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Az adataidat nem használjuk olyan automatizált döntéshozatalra, amelynek rád nézve joghatása vagy hasonlóan jelentős hatása lenne, és nem készítünk rólad profilt.</p>
+
+<h2 id="recipients">7. Kik kapnak adatot?</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col">Címzett</th><th scope="col">Szerep</th><th scope="col">Hely</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Google Cloud (Cloud Run, Firestore, naplózás)</td><td>Adatfeldolgozónk: a NanCal szerver és adatbázisa itt fut</td><td>EU (belgiumi régió)</td></tr>
+    <tr><td>Anthropic, PBC</td><td>Adatfeldolgozónk: a beépített AI kéréseit válaszolja meg</td><td>Egyesült Államok (EGT-n kívül)</td></tr>
+    <tr><td>Google Play (fizetés, Play Integrity)</td><td>Önálló adatkezelő: fizetés, a vásárlás ellenőrzése, az app eredetisége</td><td>EU és világszerte</td></tr>
+    <tr><td>Open Food Facts</td><td>Önálló adatkezelő: ételkeresés és vonalkód</td><td>Franciaország</td></tr>
+    <tr><td>Google (Gemini API) vagy Anthropic (Claude API), saját kulccsal</td><td>Általad választott, önálló szolgáltató, amellyel saját megállapodásod van</td><td>Lehet az EGT-n kívül</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Ha személyes adat az EGT-n kívülre kerül, a továbbítás a GDPR által megengedett garancián alapul, például megfelelőségi határozaton vagy az Európai Bizottság általános szerződési feltételein. A részleteket a fenti címen kérheted el.</p>
+
+<h2 id="retention">8. Meddig őrizzük meg az adatokat?</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col">Adat</th><th scope="col">Megőrzés</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A telefonodon lévő adatok</td><td>Amíg nem törlöd őket, nem törlöd az app tárhelyét, vagy nem távolítod el az appot</td></tr>
+    <tr><td>A beépített AI kérés fotója, szövege és válasza</td><td>A szerverünk nem tárolja</td></tr>
+    <tr><td>Telepítési rekord</td><td>400 nap azután, hogy az app utoljára regisztrált a szerveren, vagy kérésedre korábban</td></tr>
+    <tr><td>Napi AI számláló, napi közösségi számláló</td><td>7 nap a számlált nap után, vagy kérésedre korábban</td></tr>
+    <tr><td>A telepítésed és egy előfizetés közötti kapcsolat</td><td>Amíg a törlését nem kéred, vagy 400 nap azután, hogy a telepítés utoljára ellenőrizte az előfizetését</td></tr>
+    <tr><td>Előfizetési rekord (a vásárlási token hash-e, termék, állapot, lejárat)</td><td>Amíg egy telepítés használja, utána az utolsó változásától számított 90 nap</td></tr>
+    <tr><td>A telepítés-azonosító hash-e a közösségi ételek mellett</td><td>180 nap a megerősítés vagy a jelentés után, vagy kérésedre korábban</td></tr>
+    <tr><td>Szervernapló</td><td>30 nap</td></tr>
+    <tr><td>Névtelen használati számlálók, közösségi termékadatok</td><td>Nincs időkorlát (nem személyes adat)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>A lejárt rekordokat napi takarítás távolítja el, ezért a tényleges törlés a fenti határidők után legfeljebb két nappal történik meg.</p>
+
+<h2 id="rights">9. A jogaid</h2>
+<p>A GDPR alapján kérheted a személyes adataidhoz való hozzáférést, azok helyesbítését vagy törlését, az adatkezelés korlátozását, az adathordozhatóságot, és tiltakozhatsz a jogos érdeken alapuló adatkezelés ellen. Ehhez írj a <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a> címre. Egy hónapon belül válaszolunk.</p>
+<p>A telepítésed szerveroldali rekordjait az appban magad is azonnal törölheted (Profil > Névjegy > Adataim törlése). Mivel nem tudjuk, ki vagy, e-mailes kérésre ezeket a rekordokat csak akkor találjuk meg, ha elküldöd az appban látható telepítési hivatkozást. Mindkét módot az <a href="delete-data.html">adattörlési oldal</a> írja le.</p>
+<p>Jogod van panaszt tenni az adatvédelmi hatóságnál, különösen a lakóhelyed szerinti EU-tagállamban. Magyarországon ez a Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), <a href="https://www.naih.hu" rel="noopener">naih.hu</a>. Bírósághoz is fordulhatsz.</p>
+
+<h2 id="age">10. Életkor</h2>
+<p>A NanCal felnőtteknek készült. Az app használatához legalább 18 évesnek kell lenned. Gyermekek adatait tudatosan nem kezeljük.</p>
+
+<h2 id="security">11. Biztonság</h2>
+<ul>
+  <li>Minden hálózati forgalom HTTPS-en megy.</li>
+  <li>Az API kulcsok titkosítva tárolódnak a telefonon, és soha nem kerülnek naplóba vagy mentésbe.</li>
+  <li>A szerver csak a Google Play Integrity ellenőrzésen átment kéréseket fogadja el, és a naplója nem tartalmaz kéréstartalmat, tokent vagy IP-címet.</li>
+</ul>
+
+<h2 id="changes">12. A tájékoztató módosítása</h2>
+<p>Ha megváltozik, hogyan kezeli az app az adatokat, frissítjük ezt az oldalt és a tetején lévő dátumot. Az aktuális változat mindig elérhető itt: https://nandorszabo.github.io/nancal/hu/privacy.html.</p>
+
+<h2 id="contact">13. Kapcsolat</h2>
+<p>Adatvédelmi kérdés esetén írj ide: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a></p>
+<p>Ez a tájékoztató <a href="../privacy.html" lang="en" hreflang="en">angolul</a> is elérhető. Eltérés esetén a magyar változat az irányadó.</p>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>A NanCal üzemeltetője: Nándor Szabó. Kapcsolat: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a></p>
+    <p>A NanCal nem orvosi eszköz. Ez az oldal nem használ sütiket, követőkódot vagy külső szkriptet.</p>
+  </div>
+</footer>
+</body>
+</html>

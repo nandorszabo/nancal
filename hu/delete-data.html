@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Az adataid törlése - NanCal</title>
+  <meta name="description" content="Hogyan törölheted a NanCal által a telefonodon tárolt adatokat, és hogyan kérheted a telepítésedhez tartozó szerveroldali rekordok törlését.">
+  <link rel="canonical" href="https://nandorszabo.github.io/nancal/hu/delete-data.html">
+  <link rel="alternate" hreflang="en" href="../delete-data.html">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Ugrás a tartalomra</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../hu/index.html">NanCal</a>
+    <nav aria-label="Fő menü">
+      <ul>
+        <li><a href="../hu/privacy.html">Adatvédelem</a></li>
+        <li><a href="../hu/terms.html">Feltételek</a></li>
+        <li><a href="../hu/delete-data.html">Adattörlés</a></li>
+        <li><a href="../hu/medical.html">Nem orvosi eszköz</a></li>
+        <li><a href="../delete-data.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Az adataid törlése</h1>
+<p class="meta">Utolsó frissítés: 2026-11-23</p>
+
+<p class="lead">A NanCalban nincs felhasználói fiók. Szinte minden adatod a telefonodon van, ahol bármikor magad törölheted. A telepítésedhez néhány technikai rekord létezhet a szerverünkön; ezeket az appból törölheted, vagy e-mailben kérheted a törlésüket.</p>
+
+<h2 id="phone">1. A telefonodon lévő adatok</h2>
+<p>Ide tartozik a profilod, a naplód, a testsúlyod, a vízfogyasztásod, a saját ételeid, a receptjeid, a beállításaid és a mentett AI kulcsaid.</p>
+<ul>
+  <li><strong>Minden törlése az appban:</strong> nyisd meg a <strong>Profil > Névjegy > Adataim törlése</strong> képernyőt, és válaszd a "Minden törlése" gombot. Az app először a szerverünktől kéri a 2. pontban leírt rekordok törlését, utána a telefonon lévő összes adatát törli, és úgy indul újra, mintha most telepítetted volna. Ha később még szükséged lehet az adataidra, előbb készíts mentést vagy exportot.</li>
+  <li><strong>Minden törlése az app nélkül:</strong> Android Beállítások > Alkalmazások > NanCal > Tárhely > Tárhely törlése, vagy távolítsd el az appot. Az órás app eltávolítása az óráról is törli az adatait.</li>
+  <li><strong>Egyes tételek törlése:</strong> a naplóbejegyzéseket, a vizet, a testsúly-bejegyzéseket, az ételeket és a recepteket az appon belül törölheted.</li>
+</ul>
+<p>Az appon kívül tárolt adatokat ez nem törli:</p>
+<ul>
+  <li><strong>Health Connect:</strong> amit a NanCal oda írt (víz, testsúly, étkezések), azt a Health Connectben törölheted: Alkalmazásengedélyek > NanCal > Alkalmazásadatok törlése, vagy Adatok és hozzáférés.</li>
+  <li><strong>Mentés- és exportfájlok:</strong> ott törölheted őket, ahová mentetted (például a fájljaid között vagy a felhőtárhelyeden).</li>
+  <li><strong>Android biztonsági mentés:</strong> ha a telefonod az appok adatait a Google-fiókodba menti, ezt a mentést a Google-fiókod biztonsági mentési beállításaiban kezelheted vagy törölheted.</li>
+</ul>
+
+<h2 id="server">2. A szerverünkön lévő adatok</h2>
+<p>A szerverünkön soha nincs ott a naplód, a profilod, a testsúlyod, a fotóid vagy az AI válaszai. Ha használtad a beépített AI-t, az előfizetést vagy a közösségi ételeket, a szerver az alábbi rekordokat tárolhatja, a telepítésed véletlen azonosítójának hash-e alatt:</p>
+<ul>
+  <li>a telepítés rekordja (appverzió, az első és az utolsó jelentkezés napja);</li>
+  <li>a beépített AI kérések napi számlálója;</li>
+  <li>a telepítésed és egy NanCal Pro előfizetés közötti kapcsolat;</li>
+  <li>a közösségi ételek lekérdezéseinek, beküldéseinek és jelentéseinek napi számlálói, valamint annak jelölése, hogy a telepítésed megerősített vagy jelentett egy közösségi ételt.</li>
+</ul>
+
+<h3 id="in-app">Törlés az appból (azonnali)</h3>
+<p>Az appban nyisd meg a <strong>Profil > Névjegy > Adataim törlése</strong> képernyőt, és erősítsd meg a törlést. Az app megkéri a szerverünket a fent felsorolt rekordok törlésére, és a szerver ezt azonnal elvégzi. Ezt még azelőtt tedd meg, hogy törölnéd az app tárhelyét vagy eltávolítanád az appot, mert a kéréshez a telefonodon tárolt telepítés-azonosító kell.</p>
+
+<h3 id="request">Törlés kérése e-mailben</h3>
+<p>Ezt akkor használd, ha az appból nem tudod elvégezni, például mert a törlés a készülékeden nem sikerül, vagy inkább közvetlenül tőlünk kéred.</p>
+<ol>
+  <li>Az appban nyisd meg a <strong>Profil > Névjegy > Adataim törlése</strong> képernyőt, és másold ki az ott látható telepítési hivatkozást (64 betű és számjegy). Erre azért van szükség, mert más módon nem tudjuk megállapítani, mely rekordok tartoznak hozzád.</li>
+  <li>Írj e-mailt a <a href="mailto:nancal.support@gmail.com?subject=NanCal%20adatt%C3%B6rl%C3%A9si%20k%C3%A9relem">nancal.support@gmail.com</a> címre "NanCal adattörlési kérelem" tárggyal, és illeszd be a hivatkozást az üzenetbe. A nevedet és az indokot nem kell megadnod.</li>
+  <li>A fent felsorolt rekordokat töröljük, és 30 napon belül e-mailben visszaigazoljuk. Az e-mailedet csak a kérelem kezeléséhez használjuk, és a lezárása után töröljük, kivéve ha jogszabály a megőrzését írja elő.</li>
+</ol>
+<p>Ha az appot már eltávolítottad, vagy törölted a tárhelyét, a telepítési hivatkozás már nem létezik. A megmaradt szerveroldali rekordokat ilyenkor sem mi, sem más nem tudja hozzád kapcsolni, és maguktól törlődnek: a napi számlálók 7 nap után, a közösségi ételek melletti jelölés 180 nap után, a telepítési rekord és az előfizetéshez való kapcsolat 400 nap tétlenség után (a napi takarítás miatt legfeljebb két nappal később). Kérdéssel ekkor is írhatsz nekünk.</p>
+
+<h3 id="kept">Mi marad meg a törlés után?</h3>
+<ul>
+  <li><strong>Névtelen használati számlálók:</strong> azonosító nélküli, összesített számok, amelyek nem vezethetők vissza egy telepítésre. A további jelentéseket a Beállításokban állíthatod le.</li>
+  <li><strong>Közösségi termékadatok</strong> (az általad beküldött termék neve, márkája, tápértékei) a közös adatbázisban maradnak, a telepítésedhez való kapcsolat nélkül. Ha egy általad beküldött termék hibás, írj nekünk, és javítjuk vagy eltávolítjuk.</li>
+  <li><strong>Maga az előfizetési rekord</strong> (a vásárlási token hash-e a termékkel, az állapottal és a lejárattal) megmarad, amíg egy másik telepítés használja az előfizetést; különben az utolsó változása után 90 nappal törlődik. A telepítésedhez már nem kapcsolódik.</li>
+  <li><strong>Szervernapló:</strong> a korábbi beépített AI kéréseid és vásárlásaid naplósorai tartalmazzák a telepítés-azonosító hash-ét. Ezek egyenként nem törölhetők, és 30 napon belül eltűnnek.</li>
+</ul>
+
+<div class="box">
+  <p><strong>Az adatok törlése nem mondja le az előfizetést.</strong> A NanCal Pro előfizetést a Google Playben mondhatod le (Fizetés és előfizetések > Előfizetések). A Google által őrzött vásárlási adatok a Google-fiókodhoz tartoznak, és ott kezelhetők.</p>
+</div>
+
+<h2 id="others">3. Másoknál lévő adatok</h2>
+<p>A saját API kulcsoddal küldött kérések közvetlenül a Google-höz (Gemini) vagy az Anthropichoz (Claude) kerültek, és az adott szolgáltatóval kötött saját megállapodásod szerint kezelik őket. A keresések és a vonalkód-lekérdezések az Open Food Factshez mentek. Ezekről a kérésekről nálunk nincs másolat. Részletek az <a href="privacy.html">Adatvédelmi tájékoztatóban</a>.</p>
+
+<h2 id="contact">4. Kapcsolat</h2>
+<p><a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a></p>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>A NanCal üzemeltetője: Nándor Szabó. Kapcsolat: <a href="mailto:nancal.support@gmail.com">nancal.support@gmail.com</a></p>
+    <p>A NanCal nem orvosi eszköz. Ez az oldal nem használ sütiket, követőkódot vagy külső szkriptet.</p>
+  </div>
+</footer>
+</body>
+</html>
